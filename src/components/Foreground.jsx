@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import Cards from "./Cards";
 
 const Foreground = () => {
-	const ref = useRef(null);
+	const constraintsRef = useRef(null);
 	const data = [
 		{
 			desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Exercitationem, iusto. Lorem ipsum dolor sit amet.",
@@ -38,11 +38,11 @@ const Foreground = () => {
 	return (
 		<>
 			<div
-				ref={ref}
+				ref={constraintsRef}
 				className="foreground  h-full w-full p-5 flex gap-2 overflow-hidden  "
 			>
 				{data.map((item, i) => (
-					<Cards data={item} key={i} reference={ref} />
+					<Cards data={item} key={i} reference={constraintsRef} />
 				))}
 			</div>
 		</>
